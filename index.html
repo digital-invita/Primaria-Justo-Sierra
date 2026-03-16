@@ -45,11 +45,15 @@ color:white;
 padding:35px;
 border-radius:18px;
 
-/* glass effect */
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(6px);
+background:rgba(15,28,63,0.65);
+backdrop-filter:blur(10px);
 
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.pantalla h1{
+font-size:45px;
+margin-bottom:10px;
 }
 
 .pantalla h2{
@@ -57,34 +61,44 @@ margin-bottom:25px;
 font-weight:500;
 }
 
+/* BOTON ABRIR INVITACION */
+
 .pantalla button{
-background:#ffd86b;
+background:linear-gradient(135deg,#ffd86b,#f5c84c);
+color:#0f1c3f;
 border:none;
-padding:14px 28px;
+padding:14px 30px;
 font-size:18px;
 border-radius:30px;
 cursor:pointer;
 font-weight:bold;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 
 animation:latido 2s infinite;
+transition:all .25s ease;
 }
+
+/* animacion latido */
 
 @keyframes latido{
 0%{transform:scale(1)}
-50%{transform:scale(1.05)}
+50%{transform:scale(1.06)}
 100%{transform:scale(1)}
 }
 
+/* hover */
+
 .pantalla button:hover{
-transform:scale(1.05);
+transform:scale(1.08);
+box-shadow:0 14px 30px rgba(0,0,0,0.35);
 }
+
 *{
 box-sizing:border-box;
 margin:0;
 padding:0;
 }
-
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 background:linear-gradient(180deg,#fff9d6,#ffeaf3);
