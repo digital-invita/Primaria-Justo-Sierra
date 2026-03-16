@@ -168,7 +168,33 @@ font-size:18px;
 margin:10px 0;
 line-height:1.6;
 }
+.evento-card{
+text-align:left;
+}
 
+.evento-item{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin:12px 0;
+font-size:17px;
+line-height:1.5;
+}
+
+.evento-item span{
+font-size:22px;
+width:28px;
+}
+
+.evento-item p{
+margin:0;
+}
+
+.titulo-seccion{
+text-align:center;
+margin-bottom:10px;
+color:#1b2f6b;
+}
 /* CONTADOR */
 
 .countdown{
@@ -323,30 +349,40 @@ Abrir invitación
 
 <!-- EVENTO -->
 
-<div class="card">
+<div class="card evento-card">
+ <h2 class="titulo-seccion">🎊 Detalles del evento</h2>
 
-<p class="evento">🎉 Gran Kermés Escolar</p>
+<div class="evento-item">
+<span>🎉</span>
+<p>Gran Kermés Escolar</p>
+</div>
 
-<p class="evento">
-👑 Coronación del Rey y Reina de la Primavera
-</p>
+<div class="evento-item">
+<span>👑</span>
+<p>Coronación del Rey y Reina de la Primavera</p>
+</div>
 
-<p class="evento">
-💃 Presentación de bailables<br>
+<div class="evento-item">
+<span>💃</span>
+<p>Presentación de bailables<br>
 1°A · 2°A · 3°A · 4°A · 5°A · 6°A · 6°B
 </p>
+</div>
 
-<p class="evento">
-📅 20 de Marzo de 2026
-</p>
+<div class="evento-item">
+<span>📅</span>
+<p>20 de Marzo de 2026</p>
+</div>
 
-<p class="evento">
-⏰ Inicio 8:00 AM
-</p>
+<div class="evento-item">
+<span>⏰</span>
+<p>Inicio 8:00 AM</p>
+</div>
 
-<p class="evento">
-🌮 Venta de antojitos
-</p>
+<div class="evento-item">
+<span>🌮</span>
+<p>Venta de antojitos</p>
+</div>
 
 </div>
 
