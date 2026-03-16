@@ -430,6 +430,7 @@ Haz clic aquí para obtener la tuya
 </div>
 
 <script>
+
 function abrirInvitacion(){
 
 document.getElementById("inicio").style.display="none";
@@ -443,6 +444,7 @@ const musica = document.getElementById("musica");
 musica.play();
 
 }
+
 const evento = new Date("2026-03-20T08:00:00").getTime();
 
 setInterval(function(){
@@ -469,23 +471,13 @@ document.getElementById("min").innerHTML = min;
 document.getElementById("seg").innerHTML = seg;
 
 },1000);
+
 history.scrollRestoration = "manual";
 
 window.onload = function() {
 window.scrollTo(0,0);
 };
 
-function abrirInvitacion(){
-
-document.getElementById("inicio").style.display="none";
-
-window.scrollTo(0,0);
-
-const musica = document.getElementById("musica");
-
-musica.play();
-
-}
 </script>
 
 </body>
