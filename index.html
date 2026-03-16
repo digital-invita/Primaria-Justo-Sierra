@@ -1,4 +1,4 @@
-html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,87 +7,130 @@ html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kermés de Primavera</title>
-
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
+/* RESET */
 *{
 box-sizing:border-box;
-}
-
-body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-background:linear-gradient(160deg,#fff6cc,#ffe3f1);
-text-align:center;
-color:#333;
+padding:0;
 }
 
+/* FONDO */
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:linear-gradient(180deg,#fff8cc,#ffe7f1);
+color:#333;
+text-align:center;
+}
+
+/* CONTENEDOR */
 .container{
-max-width:600px;
+max-width:650px;
 margin:auto;
+padding:25px;
+}
+
+/* ENCABEZADO */
+.hero{
+background:linear-gradient(135deg,#ffb6d9,#ffd86b);
+border-radius:18px;
 padding:30px 20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+margin-bottom:25px;
 }
 
 .logo{
-width:120px;
-margin-bottom:15px;
+width:110px;
+margin-bottom:10px;
 }
 
-h1{
-font-size:32px;
-color:#e91e63;
-margin:10px 0;
+.hero h1{
+font-size:34px;
+color:#fff;
+margin-top:10px;
 }
 
-h2{
-font-size:20px;
-margin:5px 0;
+.hero h2{
+font-size:18px;
+color:#fff;
+opacity:.95;
 }
 
+/* TARJETAS */
 .card{
 background:white;
-border-radius:16px;
+border-radius:18px;
 padding:25px;
 margin-top:20px;
-box-shadow:0 15px 35px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
+/* EVENTO */
 .evento{
 font-size:18px;
 margin:10px 0;
-line-height:1.5;
+line-height:1.6;
 }
 
-.preview{
+/* CONTADOR */
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.countdown div{
+background:#f7f7f7;
+padding:12px;
+border-radius:12px;
+min-width:70px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+.countdown span{
+font-size:22px;
+font-weight:bold;
+display:block;
+}
+
+/* MAPA */
+iframe{
 width:100%;
+height:260px;
+border:none;
 border-radius:12px;
 margin-top:15px;
 }
 
-.btn-maps{
+/* BOTON */
+.btn{
 display:inline-block;
 margin-top:18px;
-padding:12px 22px;
+padding:12px 24px;
 background:#e91e63;
 color:white;
 text-decoration:none;
 border-radius:30px;
 font-weight:bold;
 font-size:16px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 transition:.3s;
 }
 
-.btn-maps:hover{
+.btn:hover{
 transform:scale(1.05);
 }
 
+/* FOOTER */
 .footer{
-margin-top:25px;
+margin-top:30px;
 font-size:20px;
 font-weight:bold;
+color:#444;
 }
 
 </style>
@@ -97,26 +140,31 @@ font-weight:bold;
 
 <div class="container">
 
+<!-- ENCABEZADO -->
+<div class="hero">
+
 <img src="Justo sierra LOGO.png" class="logo">
 
-<h1>🌸 Fiesta de Primavera 🌸</h1>
-
 <h2>Escuela Primaria</h2>
-<h2>"JUSTO SIERRA"</h2>
+<h1>JUSTO SIERRA</h1>
 
+<h2>🌸 Fiesta de Primavera 🌸</h2>
+
+</div>
+
+
+<!-- EVENTO -->
 <div class="card">
 
-<p class="evento">
-🎉 Habrá Kermés
-</p>
+<p class="evento">🎉 Gran Kermés Escolar</p>
 
 <p class="evento">
 👑 Coronación del Rey y Reina de la Primavera
 </p>
 
 <p class="evento">
-💃 Bailables de los grupos:<br>
-1°A, 2°A, 3°A, 4°A, 5°A, 6°A y 6°B
+💃 Presentación de bailables<br>
+1°A · 2°A · 3°A · 4°A · 5°A · 6°A · 6°B
 </p>
 
 <p class="evento">
@@ -124,40 +172,66 @@ font-weight:bold;
 </p>
 
 <p class="evento">
-⏰ Inicio: 8:00 AM
+⏰ Inicio 8:00 AM
 </p>
 
 <p class="evento">
-🌮 Habrá venta de antojitos
+🌮 Venta de antojitos
 </p>
 
 </div>
 
+
+<!-- CONTADOR -->
+<div class="card">
+
+<h2>⏳ Falta para el evento</h2>
+
+<div class="countdown">
+
+<div>
+<span id="dias">0</span>
+Días
+</div>
+
+<div>
+<span id="horas">0</span>
+Horas
+</div>
+
+<div>
+<span id="min">0</span>
+Min
+</div>
+
+</div>
+
+</div>
+
+
+<!-- UBICACION -->
 <div class="card">
 
 <h2>📍 Ubicación</h2>
 
 <p class="evento">
-Plaza principal<br>
+Plaza Principal<br>
 Santo Domingo Ajoloapan
 </p>
 
-<a href="https://maps.google.com/?q=Plaza+principal+Santo+Domingo+Ajoloapan"
-target="_blank">
+<iframe
+src="https://www.google.com/maps?q=19.76265095354237,-98.95479172303314&z=16&output=embed"
+loading="lazy">
+</iframe>
 
-<img 
-src="<iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses-419!2smx!4v1773682985551!5m2!1ses-419!2smx!6m8!1m7!1sfjwbE41q3qoDkY804d8SaQ!2m2!1d19.76265095354237!2d-98.95479172303314!3f178.68397553120388!4f14.288034671575971!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
-class="preview">
-
-</a>
-
-<a class="btn-maps"
+<a class="btn"
 href="https://maps.app.goo.gl/84jiSRmHCdrArXg46"
 target="_blank">
-Abrir en Google Maps
+Cómo llegar
 </a>
 
 </div>
+
 
 <div class="footer">
 ¡Te esperamos! 🌼
@@ -165,5 +239,28 @@ Abrir en Google Maps
 
 </div>
 
+
+<script>
+
+const evento = new Date("March 20, 2026 08:00:00").getTime();
+
+setInterval(function(){
+
+const ahora = new Date().getTime();
+const diferencia = evento - ahora;
+
+const dias = Math.floor(diferencia / (1000*60*60*24));
+const horas = Math.floor((diferencia % (1000*60*60*24)) / (1000*60*60));
+const min = Math.floor((diferencia % (1000*60*60)) / (1000*60));
+
+document.getElementById("dias").innerHTML = dias;
+document.getElementById("horas").innerHTML = horas;
+document.getElementById("min").innerHTML = min;
+
+},1000);
+
+</script>
+
 </body>
 </html>
+
