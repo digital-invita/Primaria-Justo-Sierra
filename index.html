@@ -2,11 +2,12 @@ html
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kermés de Primavera</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
@@ -17,8 +18,8 @@ box-sizing:border-box;
 
 body{
 margin:0;
-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-background:linear-gradient(180deg,#fff7d6,#ffe4ec);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:linear-gradient(160deg,#fff6cc,#ffe3f1);
 text-align:center;
 color:#333;
 }
@@ -29,23 +30,28 @@ margin:auto;
 padding:30px 20px;
 }
 
-h1{
-font-size:34px;
-color:#e91e63;
-margin-bottom:10px;
+.logo{
+width:120px;
+margin-bottom:15px;
 }
 
-h2{
-font-size:22px;
+h1{
+font-size:32px;
+color:#e91e63;
 margin:10px 0;
 }
 
-.info{
+h2{
+font-size:20px;
+margin:5px 0;
+}
+
+.card{
 background:white;
-border-radius:15px;
-padding:20px;
+border-radius:16px;
+padding:25px;
 margin-top:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
 }
 
 .evento{
@@ -54,16 +60,34 @@ margin:10px 0;
 line-height:1.5;
 }
 
-.destacado{
+.preview{
+width:100%;
+border-radius:12px;
+margin-top:15px;
+}
+
+.btn-maps{
+display:inline-block;
+margin-top:18px;
+padding:12px 22px;
+background:#e91e63;
+color:white;
+text-decoration:none;
+border-radius:30px;
 font-weight:bold;
-color:#d81b60;
+font-size:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:.3s;
+}
+
+.btn-maps:hover{
+transform:scale(1.05);
 }
 
 .footer{
 margin-top:25px;
 font-size:20px;
 font-weight:bold;
-color:#444;
 }
 
 </style>
@@ -73,25 +97,21 @@ color:#444;
 
 <div class="container">
 
+<img src="Justo sierra LOGO.png" class="logo">
+
 <h1>🌸 Fiesta de Primavera 🌸</h1>
 
 <h2>Escuela Primaria</h2>
-<h2 class="destacado">"JUSTO SIERRA"</h2>
+<h2>"JUSTO SIERRA"</h2>
 
-<div class="info">
-
-<p class="evento">
-📍 Plaza Principal<br>
-Santo Domingo Ajoloapan
-</p>
+<div class="card">
 
 <p class="evento">
 🎉 Habrá Kermés
 </p>
 
 <p class="evento">
-👑 Coronación del<br>
-Rey y Reina de la Primavera
+👑 Coronación del Rey y Reina de la Primavera
 </p>
 
 <p class="evento">
@@ -110,6 +130,32 @@ Rey y Reina de la Primavera
 <p class="evento">
 🌮 Habrá venta de antojitos
 </p>
+
+</div>
+
+<div class="card">
+
+<h2>📍 Ubicación</h2>
+
+<p class="evento">
+Plaza principal<br>
+Santo Domingo Ajoloapan
+</p>
+
+<a href="https://maps.google.com/?q=Plaza+principal+Santo+Domingo+Ajoloapan"
+target="_blank">
+
+<img 
+src="<iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses-419!2smx!4v1773682985551!5m2!1ses-419!2smx!6m8!1m7!1sfjwbE41q3qoDkY804d8SaQ!2m2!1d19.76265095354237!2d-98.95479172303314!3f178.68397553120388!4f14.288034671575971!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+class="preview">
+
+</a>
+
+<a class="btn-maps"
+href="https://maps.app.goo.gl/84jiSRmHCdrArXg46"
+target="_blank">
+Abrir en Google Maps
+</a>
 
 </div>
 
