@@ -136,7 +136,7 @@ transform:rotate(25deg);
 }
 
 .logo{
-width:210px;
+width:110px;
 margin-bottom:10px;
 }
 
@@ -242,8 +242,15 @@ opacity:.85;
 }
 
 .promo img{
-width:70px;
-margin-bottom:8px;
+width:120px;
+margin-bottom:12px;
+opacity:.9;
+transition:.3s;
+}
+
+.promo img:hover{
+transform:scale(1.05);
+opacity:1;
 }
 
 .promo p{
@@ -444,7 +451,23 @@ document.getElementById("min").innerHTML = min;
 document.getElementById("seg").innerHTML = seg;
 
 },1000);
+history.scrollRestoration = "manual";
 
+window.onload = function() {
+window.scrollTo(0,0);
+};
+
+function abrirInvitacion(){
+
+document.getElementById("inicio").style.display="none";
+
+window.scrollTo(0,0);
+
+const musica = document.getElementById("musica");
+
+musica.play();
+
+}
 </script>
 
 </body>
